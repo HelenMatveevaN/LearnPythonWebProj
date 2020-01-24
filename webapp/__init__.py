@@ -1,10 +1,12 @@
 from flask import Flask, render_template
 
+from webapp.model import db, Categories, Images, ImagesCategories
 from webapp.forms import SelectImgForm
 
 def create_app():
     app = Flask(__name__) #переменная будет flask-приложением
     app.config.from_pyfile('config.py') #можно брать конфигурацию из json и др. типов файлов
+    db.init_app(app) #инициализация базы данных, после app.config (последовательность строго такая)
 
     @app.route("/") #запустится __init__.py
     def index():
