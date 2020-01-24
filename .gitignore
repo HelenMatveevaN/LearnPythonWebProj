@@ -1,0 +1,6 @@
+Help.rtf
+.vscode/
+__pycache__/
+env/
+config.py
+.DS_Store
