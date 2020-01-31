@@ -7,7 +7,6 @@ db = SQLAlchemy()
 class Categories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    labelled = db.Column(db.String, nullable=True)
 
 class Images(db.Model):
     id = db.Column(db.Integer, primary_key=True)
